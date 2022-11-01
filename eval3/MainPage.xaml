@@ -1,0 +1,40 @@
+﻿<Page
+    x:Class="eval3.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:eval3"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Width="1280" Height="720">
+
+    <Grid Background="White" FocusVisualPrimaryBrush="Black">
+        <Rectangle Stroke="Black" Margin="31,30,31,30" Fill="#FFF7ECDE" RadiusX="30" RadiusY="30"/>
+        <TextBlock x:Name="label" TextWrapping="Wrap" Text="" Margin="507,519,68,158" FontSize="20" Foreground="#FFCC6666"/>
+        <ListBox Margin="64,41,883,41" Background="#FFF7ECDE">
+            <TextBlock TextWrapping="Wrap" Text="Prénom :" RenderTransformOrigin="0.599,4.455" FontSize="22" />
+            <TextBox x:Name="prenom" TextWrapping="Wrap" Text="{Binding prenom,  UpdateSourceTrigger=PropertyChanged}" Width="300" MinWidth="9" CornerRadius="10,10,10,10"/>
+            <TextBlock TextWrapping="Wrap" Text="Nom : " RenderTransformOrigin="0.599,4.455" FontSize="22" />
+            <TextBox x:Name="nom" TextWrapping="Wrap" Text="{Binding nom,  UpdateSourceTrigger=PropertyChanged}" Width="300" MinWidth="9" CornerRadius="10,10,10,10"/>
+            <TextBlock TextWrapping="Wrap" Text="Sexe :" RenderTransformOrigin="0.599,4.455" FontSize="22"/>
+            <TextBox x:Name="sexe" TextWrapping="Wrap" Text="{Binding sexe,  UpdateSourceTrigger=PropertyChanged}" Width="300" MinWidth="9" CornerRadius="10,10,10,10"/>
+            <TextBlock TextWrapping="Wrap" Text="Date naissance :" RenderTransformOrigin="0.599,4.455" FontSize="22" />
+            <TextBox x:Name="date_naissance" TextWrapping="Wrap" Text="{Binding date_naissance,  UpdateSourceTrigger=PropertyChanged}" Width="300" MinWidth="9" CornerRadius="10,10,10,10"/>
+            <TextBlock TextWrapping="Wrap" Text="Numéro passeport :" RenderTransformOrigin="0.599,4.455" FontSize="22"/>
+            <TextBox x:Name="numero_passeport" TextWrapping="Wrap" Text="{Binding numero_passeport, UpdateSourceTrigger=PropertyChanged}" Width="300" MinWidth="9" CornerRadius="10,10,10,10"/>
+            <TextBlock TextWrapping="Wrap" Text="Échéance passeport :" RenderTransformOrigin="0.599,4.455" FontSize="22"/>
+            <TextBox x:Name="echeance_passeport" TextWrapping="Wrap" Text="{Binding date_echeance, UpdateSourceTrigger=PropertyChanged}" Width="300" MinWidth="9" CornerRadius="10,10,10,10"/>
+        </ListBox>
+        <Button x:Name="supprimer" CornerRadius="15,15,15,15" Content="❌ Supprimer" Margin="1006,592,0,0" VerticalAlignment="Top" Height="64" Width="219" FontSize="22" Click="supprimer_Click" Background="#FFE9DAC1" FontFamily="Bodoni MT Poster Compressed" />
+        <Button x:Name="ajouter" CornerRadius="15,15,15,15" Content="➕ Ajouter" Margin="507,592,0,0" VerticalAlignment="Top" Height="64" Width="219"  FontSize="22" Click="ajouter_Click" Background="#FFE9DAC1" FontFamily="Bodoni MT Poster Compressed"/>
+        <Button x:Name="nouveau" CornerRadius="15,15,15,15" Content="👤 Nouveau" Margin="757,592,0,0" VerticalAlignment="Top" Height="64" Width="219" FontSize="22" Click="nouveau_Click" Background="#FFE9DAC1" FontFamily="Bodoni MT Poster Compressed" />
+        <Button x:Name="premier" CornerRadius="15,15,15,15" Content="↩️ Premier  " Margin="1006,54,0,0" VerticalAlignment="Top" Height="64" Width="219"  FontSize="28" Click="premier_Click" Background="#FF8EC2B6" FontFamily="Calibri"/>
+        <Button x:Name="precedent" CornerRadius="15,15,15,15" Content="    Précédent  " Margin="1006,155,0,0" VerticalAlignment="Top" Height="64" Width="219"  FontSize="28" Click="precedent_Click" Background="#FF9ED2C6" HorizontalAlignment="Left" FontFamily="Calibri"/>
+        <Button x:Name="suivant" CornerRadius="15,15,15,15" Content="Suivant" Margin="1006,256,0,0" VerticalAlignment="Top" Height="64" Width="219"  FontSize="28" Click="suivant_Click" Background="#FF9ED2C6" FontFamily="Calibri"/>
+        <Button x:Name="dernier" CornerRadius="15,15,15,15" Content="↪️ Dernier" Margin="1006,360,0,0" VerticalAlignment="Top" Height="64" Width="219"  FontSize="28" Click="dernier_Click" Background="#FF8EC2B6" FontFamily="Calibri"/>
+        <TextBlock x:Name="titre" TextWrapping="Wrap" Margin="397,54,308,126" FontSize="72" FontFamily="Bahnschrift Light" FontStyle="Normal" TextAlignment="Center" FocusVisualPrimaryBrush="#FF100000" Foreground="#FF333333" ><Run/><LineBreak/><Run Text="LISTE"/><LineBreak/><Run Text="DES"/><LineBreak/><Run Text="VOYAGEURS"/><LineBreak/><Run Text="🗺️ "/></TextBlock>
+        <Image Height="100" Width="100"/>
+        <Image Source="/Assets/gauche.png" Margin="1025,171,214,517" RenderTransformOrigin="2.711,0.714"/>
+        <Image Source="/Assets/droite.png" Margin="1025,272,214,416" RenderTransformOrigin="0.736,2.812"/>
+    </Grid>
+</Page>
